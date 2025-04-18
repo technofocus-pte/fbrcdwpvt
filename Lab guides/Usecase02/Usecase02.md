@@ -122,7 +122,7 @@ of resources.
 ## Task 1: Redeem Azure Pass
 
 1.  Open a new tab on your browser and enter the following link in the
-    address bar: +++https://www.microsoftazurepass.com/+++
+    address bar: !!https://www.microsoftazurepass.com/!!
 
 2.  Then, click on the **Start** button.
 
@@ -172,7 +172,7 @@ dataflows, Data Factory pipelines, the notebooks, Power BI datasets, and
 reports.
 
 1.  Open your browser, navigate to the address bar, and type or paste
-    the following URL:+++https://app.fabric.microsoft.com/+++
+    the following URL:!!https://app.fabric.microsoft.com/!!
     then press the **Enter** button.
 
 2.  In the **Microsoft Fabric** window, enter assign credentials and
@@ -199,7 +199,7 @@ reports.
     enter the following details, and click on the **Apply** button.
     |  |  |
     |---|---|
-    |Name	|+++RealTimeWorkspaceXXX+++ (XXX can be a unique number, you can add more numbers)|
+    |Name	|!!RealTimeWorkspaceXXX!! (XXX can be a unique number, you can add more numbers)|
     |Advanced|	Select Trail|
     |Default storage format|	Small dataset storage format|
 
@@ -223,7 +223,7 @@ To auto-deploy the resources, use these steps below.
 1.  Open a new address bar and enter the following URL. If prompted to
     Sign in, then use your assign tenant credentials.
 
-+++https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fmicrosoft%2Ffabricrealtimelab%2Fmain%2Fresources%2Fmodule00%2Ffabricworkshop_arm_managedid.json+++
+!!https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fmicrosoft%2Ffabricrealtimelab%2Fmain%2Fresources%2Fmodule00%2Ffabricworkshop_arm_managedid.json!!
 
 2.  In the **Custom deployment** window, under the **Basics** tab, enter
     the following details and click on the **Review+create** button.
@@ -231,7 +231,7 @@ To auto-deploy the resources, use these steps below.
     |  |  |
     |---|---|
     |Subscription|	Select the assigned subscription|
-    |Resource group|	Click on Create new> enter +++realtimeworkshop+++ and select **Ok**|
+    |Resource group|	Click on Create new> enter !!realtimeworkshop!! and select **Ok**|
     |Region|	Select **West US 3**|
 
 
@@ -284,7 +284,7 @@ To auto-deploy the resources, use these steps below.
 
 1.  On the **Synapse Real-Time Analytics** home page,select **+New item** and 
     select **Eventstream**. Name the Eventstream
-    **+++StockEventStream+++**, and click on the **Create** button.
+    **!!StockEventStream!!**, and click on the **Create** button.
     
     ![](./media/image30.png)
     
@@ -298,11 +298,11 @@ To auto-deploy the resources, use these steps below.
 3.  On the **Azure Event Hubs** configuration page, enter the below
     details and click on **Add** button.
 
-    i.	**Source name**: +++StockEventHub+++
+    i.	**Source name**: !!StockEventHub!!
     ii.	Cloud connection: Click on the **Create new** and enter the below details then click on **Create** button. 
         a.	In Event Hub namespace-Enter Event Hub name (the values that you have saved in your notepad in the **Task 3**)
-        b.	Event Hub : +++stockeventhub+++
-        c.	Shared Access Key Name:+++stockeventhub_sas+++
+        b.	Event Hub : !!stockeventhub!!
+        c.	Shared Access Key Name:!!stockeventhub_sas!!
         d.	Shared Access Key- Enter Primary Key (the value that you have saved in your notepad in the Task 3)
     iii.	Consumer group: **$Default** 
     iv.	Data format: **JSON**
@@ -354,7 +354,7 @@ the Eventstream into the KQL DB.
 
      ![](./media/image41.png)
 
-3.  In the **New Eventhouse** dialog box, enter +++**StockDB+++**in
+3.  In the **New Eventhouse** dialog box, enter !!**StockDB!!**in
     the **Name** field, click on the **Create** button and open the new
     Eventhouse.
 
@@ -394,14 +394,14 @@ the Eventstream into the KQL DB.
 3.  On the KQL settings, select **Direct ingestion**. While we have the
     opportunity to process event data at this stage, for our purposes,
     we will ingest the data directly into the KQL database. Set the
-    destination name to **+++KQL+++**, then select your **workspace**
+    destination name to **!!KQL!!**, then select your **workspace**
     and KQL database created in the above task, then click on **Add and
     Configure** button.
 
     ![](./media/image51.png)
 
 4.  On the first settings page, select **+New table** and enter the
-    name +++*StockPrice+++* for the table to hold the data in StockDB.
+    name !!*StockPrice!!* for the table to hold the data in StockDB.
     Click on the **Next** button.
 
     ![](./media/image52.png)
@@ -446,7 +446,7 @@ complexity to support different business uses.
 
 2.  From your workspace, click on ***+** **New item > KQL Queryset** as
     shown in the below image. In the **New KQL Queryset** dialog box,
-    enter **+++StockQueryset+++**, then click on the **Create**
+    enter **!!StockQueryset!!**, then click on the **Create**
     button.
 
      ![](./media/image61.png)
@@ -505,7 +505,7 @@ complexity to support different business uses.
 
 1.  Create a new tab within the queryset by clicking on the ***+* icon**
     as shown in the below image. Rename this tab as
-    **+++StockByTime+++**
+    **!!StockByTime!!**
 
      ![](./media/image69.png)
      
@@ -561,7 +561,7 @@ complexity to support different business uses.
 
 1.  Create another new tab within the queryset by clicking on
     the ***+* icon** as shown in the below image. Rename this tab as
-    **+++StockAggregate*+++**
+    **!!StockAggregate*!!**
 
        ![](./media/image73.png)
       ![](./media/image74.png)
@@ -595,7 +595,7 @@ complexity to support different business uses.
 
 1.  Create another new tab within the queryset by clicking on
     the **+ icon** as shown in the below image. Rename this tab as
-    **+++StockBinned+++**
+    **!!StockBinned!!**
 
     ![](./media/image77.png)
     
@@ -622,7 +622,7 @@ complexity to support different business uses.
 
 1.  Create a final new tab within the queryset by clicking on
     the **+ icon** as shown in the below image. Rename this tab as
-    **+++Visualizations+++** We'll use this tab to explore
+    **!!Visualizations!!** We'll use this tab to explore
     visualizing data.
 
       ![](./media/image80.png)
@@ -734,7 +734,7 @@ updating.
     ![](./media/image94.png)
 
 6.  On **Just a few details first** dialog box, in **Name your file in
-    Power BI** field, enter **+++RealTimeStocks+++**. In **Save it to
+    Power BI** field, enter **!!RealTimeStocks!!**. In **Save it to
     a workspace** field, click on the dropdown and select
     **RealTimeWorkspace**. Then, click on the **Continue** button.
 
@@ -843,7 +843,7 @@ workspace.
 
     ![](./media/image107.png)
 
-3.  On the **New warehouse** dialog box, enter **+++StocksDW+++** as
+3.  On the **New warehouse** dialog box, enter **!!StocksDW!!** as
     the name and click on the **Create** button.
 
     ![](./media/image108.png)
@@ -915,7 +915,7 @@ workspace.
       ![](./media/image113.png)
 
 5.  In the **Rename** dialog box, under the **Name** field, enter
-    **+++Create stocks and metadata+++**, then click on the **Rename**
+    **!!Create stocks and metadata!!**, then click on the **Rename**
     button. 
 
      ![](./media/image114.png)
@@ -964,7 +964,7 @@ workspace.
     ![](./media/image118.png)
 
 7.  In the **Rename** dialog box, under the **Name** field, enter
-    **+++ETL.sql_IngestSource+++**, then click on the **Rename**
+    **!!ETL.sql_IngestSource!!**, then click on the **Rename**
     button. 
 
     ![](./media/image119.png)
@@ -987,7 +987,7 @@ workspace.
     ![](./media/image122.png)
 
 3.  A **New pipeline** dialog box will appear, in the **Name** field,
-    enter **+++PL_Refresh_DWH+++** and click on the **Create**
+    enter **!!PL_Refresh_DWH!!** and click on the **Create**
     button.
 
       ![](./media/image123.png)
@@ -1003,8 +1003,8 @@ workspace.
 
     ![](./media/image125.png)
 
-6.  On the **General** tab, in the **Name field,** enter **+++Get
-    WaterMark+++**
+6.  On the **General** tab, in the **Name field,** enter **!!Get
+    WaterMark!!**
 
     ![](./media/image126.png)
 
@@ -1015,7 +1015,7 @@ workspace.
     |---|---|
     |Connection|	Click on the dropdown and select StocksDW from the list.|
     |Use query|	Query|
-    |Query| 	+++SELECT * FROM [ETL].[IngestSourceInfo] WHERE IsActiveFlag = 'Y'+++|
+    |Query| 	!!SELECT * FROM [ETL].[IngestSourceInfo] WHERE IsActiveFlag = 'Y'!!|
     |First row only |	unchecked.|
 
     ![](./media/image127.png)
@@ -1035,7 +1035,7 @@ pull data from, we'd repeat these steps for each data source.
 
 2.  Click on the **Settings** tab, enter the items as
 
-    +++@activity('Get WaterMark').output.value +++
+    !!@activity('Get WaterMark').output.value !!
 
     This should look similar to the below image:
 
@@ -1051,7 +1051,7 @@ pull data from, we'd repeat these steps for each data source.
      ![](./media/image131.png)
 
 5.  Select **Copy data1** Activity icon, on the **General** tab, in the
-    **Name field,** enter **+++Copy KQL+++**
+    **Name field,** enter **!!Copy KQL!!**
 
      ![](./media/image132.png)
 
@@ -1061,7 +1061,7 @@ pull data from, we'd repeat these steps for each data source.
         |---|---|
         |Connection |	Select StocksDB from the dropdown.|
         |Use query|	Query|
-        |Query |	+++@concat('StockPrice                                                                                         | where todatetime(timestamp) >= todatetime(''', item().WaterMark,''')                                                    | order by timestamp asc                                                                                                  | extend datestamp = substring(timestamp,0,10)                                                                            | project symbol, timestamp, price, datestamp                                                                             | take 500000                                                                                                             | where not(isnull(price))'                                                                                              ) +++|
+        |Query |	!!@concat('StockPrice                                                                                         | where todatetime(timestamp) >= todatetime(''', item().WaterMark,''')                                                    | order by timestamp asc                                                                                                  | extend datestamp = substring(timestamp,0,10)                                                                            | project symbol, timestamp, price, datestamp                                                                             | take 500000                                                                                                             | where not(isnull(price))'                                                                                              ) !!|
 
     The *Source* tab of the activity should look similar to:
 
@@ -1079,7 +1079,7 @@ pull data from, we'd repeat these steps for each data source.
     - Under the **Advanced** section, enter the following ***Pre-copy
       script*** to truncate the table before loading the staging table:
 
-   **+++delete stg.StocksPrices+++**
+   **!!delete stg.StocksPrices!!**
 
     This step first deletes old data from the staging table, and then copies
     the data from the KQL table, selecting data from the last watermark and
@@ -1097,7 +1097,7 @@ pull data from, we'd repeat these steps for each data source.
     ![](./media/image135.png)
 
 9.  Click on **Lookup1** icon, in the **General** tab, **Name field,**
-    enter **+++Get New WaterMark+++**
+    enter **!!Get New WaterMark!!**
 
       ![](./media/image136.png)
 
@@ -1107,7 +1107,7 @@ pull data from, we'd repeat these steps for each data source.
     |---|---|
     |Connection	|drop down, select StocksDW from the list|
     |Use query|	Query|
-    |Query	|+++@concat('Select Max(timestamp) as WaterMark from stg.', item().ObjectName)+++|
+    |Query	|!!@concat('Select Max(timestamp) as WaterMark from stg.', item().ObjectName)!!|
 
     ![](./media/image137.png)
 
@@ -1117,7 +1117,7 @@ pull data from, we'd repeat these steps for each data source.
     ![](./media/image138.png)
 
 12. Click on the **Stored procedure** icon. On the **General** tab, in
-    the **Name field,** enter **+++Update WaterMark+++**
+    the **Name field,** enter **!!Update WaterMark!!**
 
     ![](./media/image139.png)
 
@@ -1304,7 +1304,7 @@ closing price of the stock.
       ![](./media/image152.png)
 
 5.  In the **Rename** dialog box, under the **Name** field, enter 
-    **+++Create Dimension and Fact tables+++**, then click on the
+    **!!Create Dimension and Fact tables!!**, then click on the
     **Rename** button. 
 
     ![](./media/image153.png)
@@ -1397,7 +1397,7 @@ closing price of the stock.
      ![](./media/image159.png)
 
 6.  In the **Rename** dialog box, under the **Name** field, enter 
-    **+++Load Dimension tables+++**, then click on the **Rename** button. 
+    **!!Load Dimension tables!!**, then click on the **Rename** button. 
 
      ![](./media/image160.png)
 
@@ -1466,7 +1466,7 @@ closing price of the stock.
      ![](./media/image163.png)
 
 8.  In the **Rename** dialog box, under the **Name** field, enter 
-    **+++Load the stock symbol dimension+++**, then click on the
+    **!!Load the stock symbol dimension!!**, then click on the
     **Rename** button. 
 
      ![](./media/image164.png)
@@ -1531,7 +1531,7 @@ closing price of the stock.
       ![](./media/image167.png)
 
 5.  In the **Rename** dialog box, under the **Name** field, enter
-    **+++Create Staging Views+++**, then click on the **Rename**
+    **!!Create Staging Views!!**, then click on the **Rename**
     button. 
 
     ![](./media/image168.png)
@@ -1552,8 +1552,8 @@ closing price of the stock.
 
     ![](./media/image170.png)
 
-4.  On the **General** tab, in the **Name field,** enter **+++Populate
-    Symbols Dimension+++**
+4.  On the **General** tab, in the **Name field,** enter **!!Populate
+    Symbols Dimension!!**
 
     ![](./media/image171.png)
 
@@ -1647,7 +1647,7 @@ closing price of the stock.
     ![](./media/image176.png)
 
 7.  In the **Rename** dialog box, under the **Name** field, enter 
-    **++ETL.sp_Fact_Stocks_Daily_Prices_Load+++**, then click on the
+    **++ETL.sp_Fact_Stocks_Daily_Prices_Load!!**, then click on the
     **Rename** button. 
 
     ![](./media/image177.png)
@@ -1867,8 +1867,8 @@ semantic model with just our fact and two-dimension tables.
 
     ![](./media/image203.png)
 
-5.  In the Save your report dialog box, enter +++semantic
-    report+++ as the name of your report and select **your
+5.  In the Save your report dialog box, enter !!semantic
+    report!! as the name of your report and select **your
     workspace**. Click on the **Save button**.
 
       ![](./media/image204.png)
