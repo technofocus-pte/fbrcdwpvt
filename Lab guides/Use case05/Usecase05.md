@@ -25,7 +25,7 @@ the end of this lab, you will be able to:
 ## Task 1:Add users and assign licenses at the same time
 
 1.  Open a new tab on your browser and enter the following link in the
-    address bar++https://go.microsoft.com/fwlink/p/?linkid=2024339+++
+    address bar!!https://go.microsoft.com/fwlink/p/?linkid=2024339!!
 
     ![](./media/image1.png)
 
@@ -94,7 +94,7 @@ Before working with data in Fabric, create a workspace with the Fabric
 trial enabled.
 
 1.  Open your browser, navigate to the address bar, and type or paste
-    the following URL: +++https://app.fabric.microsoft.com/+++ then press the
+    the following URL: !!https://app.fabric.microsoft.com/!! then press the
     **Enter** button.
 
      ![](./media/image15.png)
@@ -132,7 +132,7 @@ trial enabled.
 
     |   | |
     |-----|-----|
-    |Name	|+++Warehouse_FabricXX+++ (XX can be a unique number) (here, we entered Warehouse_Fabric29)|
+    |Name	|!!Warehouse_FabricXX!! (XX can be a unique number) (here, we entered Warehouse_Fabric29)|
     |Description|	This workspace contains all the artifacts for the data warehouse|
     |Advanced|	Under License mode, select Trial|
     |Default storage format|	Small dataset storage format|
@@ -184,7 +184,7 @@ trial enabled.
 
      ![](./media/image32.png)
 
-3.  On the **New warehouse** dialog, enter +++**datawarehouse+++** and
+3.  On the **New warehouse** dialog, enter !!**datawarehouse!!** and
     click on the **Create** button.
 
       ![](./media/image33.png)
@@ -255,7 +255,7 @@ mask, and a custom string mask.
 5.  Connect as a test user that’s a member of the **Viewer** workspace
     role and run the following T-SQL statement.
 
-    +++SELECT * FROM dbo.Customers;+++
+    !!SELECT * FROM dbo.Customers;!!
       ![](./media/image39.png)
  
       The test user hasn’t been granted UNMASK permission so data returned
@@ -269,7 +269,7 @@ mask, and a custom string mask.
     role(In this use case, we are assigning the Viewer role to **sample
     User2**)
 
-   +++GRANT UNMASK ON dbo.Customers TO [<username>@<your_domain>.com];+++
+   !!GRANT UNMASK ON dbo.Customers TO [<username>@<your_domain>.com];!!
 
 7.  Use the **▷ Run** button to run the script.
 
@@ -318,7 +318,7 @@ mask, and a custom string mask.
     statement. Click on the **Run** button to execute the query. After
     the query is executed, you will see the results.
 
-    +++SELECT * FROM dbo.Customers;+++
+    !!SELECT * FROM dbo.Customers;!!
   ![](./media/image47.png)
 
 The data is returned unmasked because the test user has been granted
@@ -460,7 +460,7 @@ predicate defined as an inline table-valued function.
     table INSERTstatement. Confirm that you’re logged in as that user by
     running the following T-SQL.
 
-      +++SELECT USER_NAME();+++
+      !!SELECT USER_NAME();!!
 
     ![](./media/image60.png)
 
@@ -468,7 +468,7 @@ predicate defined as an inline table-valued function.
     as expected. You should only see data that meets the conditions in
     the security predicate defined for the user you’re logged in as.
 
-    +++SELECT * FROM dbo.Sales;+++
+    !!SELECT * FROM dbo.Sales;!!
     ![](./media/image61.png)
 
 ## Task 7: Implement column-level security
@@ -519,7 +519,7 @@ by a user other than yourself.
 
 5.  Click on the **Run** button to execute the query
 
-     +++DENY SELECT ON dbo.Orders (CreditCard) TO [<username>@<your_domain>.com];+++
+     !!DENY SELECT ON dbo.Orders (CreditCard) TO [<username>@<your_domain>.com];!!
      ![](./media/image65.png)
 
 6.  Test column-level security by logging in to Fabric as the user you
@@ -535,7 +535,7 @@ by a user other than yourself.
     the **Run** button to execute the query. After the query is
     executed, you will see the results.
 
-    +++SELECT * FROM dbo.Orders;+++
+    !!SELECT * FROM dbo.Orders;!!
 
     ![](./media/image66.png)
 
@@ -549,7 +549,7 @@ by a user other than yourself.
     the **Run** button to execute the query. After the query is
     executed, you will see the results.
 
-    +++SELECT OrderID, CustomerID from dbo.Orders+++
+    !!SELECT OrderID, CustomerID from dbo.Orders!!
 
     ![](./media/image67.png)
 
