@@ -33,7 +33,7 @@ Before working with data in Fabric, create a workspace with the Fabric
 trial enabled.
 
 1.  Open your browser, navigate to the address bar, and type or paste
-    the following URL: https://app.fabric.microsoft.com/ then press the
+    the following URL: !!https://app.fabric.microsoft.com/!! then press the
     **Enter** button.
 
      ![](./media/image1.png)
@@ -71,7 +71,7 @@ trial enabled.
 
       |   |   |
       |---|---|
-      |Name|	+++dp-FabricXX+++ (XX can be a unique number) |
+      |Name|	!!dp-FabricXX!! (XX can be a unique number) |
       |Advanced|	Under License mode, select Trial|
       |Default storage format|	Small dataset storage format|
 
@@ -100,7 +100,7 @@ Now that you have a workspace, it’s time to create a data warehouse.
     selected.
 
 2.  On the **Home** page, select **Sample warehouse** and create a new
-    data warehouse named +++sample-dw+++.
+    data warehouse named !!sample-dw!!.
 
      ![](./media/image13.png)
  
@@ -129,7 +129,7 @@ warehouse instance.
 
      sqlCopy
     
-    +++SELECT * FROM sys.dm_exec_connections;+++
+    !!SELECT * FROM sys.dm_exec_connections;!!
 
 3.  Use the **▷ Run** button to run the SQL script and view the results,
     which include details of all connections to the data warehouse.
@@ -143,7 +143,7 @@ warehouse instance.
 
     sqlCopy
     
-    +++SELECT \* FROM sys.dm\_exec\_sessions;+++
+    !!SELECT \* FROM sys.dm\_exec\_sessions;!!
 
 5.  **Run** the modified query and view the results, which show details
     of all authenticated sessions
@@ -155,7 +155,7 @@ warehouse instance.
 
      sqlCopy
      
-     +++SELECT * FROM sys.dm_exec_requests;+++
+     !!SELECT * FROM sys.dm_exec_requests;!!
 7.  Run the modified query and view the results, which show details of
     all requests being executed in the data warehouse.
 
@@ -233,7 +233,7 @@ data warehouse.
 3.  Use the **▷ Run** button to run the SQL script and view the results,
     which include details of previously executed queries.
 
-     +++SELECT * FROM queryinsights.exec_requests_history;+++
+     !!SELECT * FROM queryinsights.exec_requests_history;!!
 
     ![](./media/image28.png)
 
@@ -241,7 +241,7 @@ data warehouse.
     like this:
 
  
-    +++SELECT * FROM queryinsights.frequently_run_queries;+++
+    !!SELECT * FROM queryinsights.frequently_run_queries;!!
 
 5.  Run the modified query and view the results, which show details of
     frequently run queries
@@ -251,7 +251,7 @@ data warehouse.
 6.  Modify the SQL code to query the **long\_running\_queries** view,
     like this:
 
-    +++SELECT * FROM queryinsights.long_running_queries;+++
+    !!SELECT * FROM queryinsights.long_running_queries;!!
 
 7.  Run the modified query and view the results, which show details of
     all queries and their durations.
