@@ -24,7 +24,7 @@ be able to:
 
 1.  Open your browser, navigate to the address bar, type or paste the
     following URL:
-   +++https://www.microsoft.com/en-us/download/details.aspx?id=58494+++ then
+   !!https://www.microsoft.com/en-us/download/details.aspx?id=58494!! then
     press the **Enter** button.
 
 2.  In the **Microsoft Power BI Desktop** page, click on the
@@ -90,7 +90,7 @@ be able to:
 
 1.  Open your browser, navigate to the address bar, type or paste the
     following URL:
-    +++https://github.com/TabularEditor/TabularEditor/releases+++ then press
+    !!https://github.com/TabularEditor/TabularEditor/releases!! then press
     the **Enter** button.
 
 2.  Scroll down to the **Assets** section and select
@@ -303,7 +303,7 @@ toolbar.*
 
 codeCopy
 
-   +++DIVIDE ( [Profit], SUM ( 'Sales'[Sales Amount] ) )+++
+   !!DIVIDE ( [Profit], SUM ( 'Sales'[Sales Amount] ) )!!
     ![](./media/image36.png)
 
 8.  To save the model changes, on the toolbar, select the **Save changes
