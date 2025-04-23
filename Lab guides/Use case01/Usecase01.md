@@ -131,7 +131,7 @@ Before working with data in Fabric, create a workspace with the Fabric
 trial enabled.
 
 1.  In the Workspaces pane Select **+** **New workspace**.
-       [](./media/a2.png)
+       ![](./media/a2.png)
      
 
 2.  In the **Create a workspace tab**, enter the following details and
