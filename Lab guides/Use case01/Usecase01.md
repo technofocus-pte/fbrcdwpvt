@@ -578,8 +578,8 @@ syntax.
 
     ![](./media/image65.png)
 
-3.In the **query editor**, remove the existing code and paste the following to create clones of the **dbo.dimension_city ** and **dbo.fact_sale** tables in the dbo1 schema.  
-
+3. In the **query editor**, remove the existing code and paste the following to create clones of the **dbo.dimension_city ** and 
+ **dbo.fact_sale** tables in the dbo1 schema.  
     ```
     --Create a clone of the dbo.dimension_city table in the dbo1 schema.
     CREATE TABLE [dbo1].[dimension_city1] AS CLONE OF [dbo].[dimension_city];
