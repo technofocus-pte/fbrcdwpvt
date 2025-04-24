@@ -466,20 +466,17 @@ methods for loading
 
 2.  In the query editor, **paste** the following code, then click on
     **Run** to execute the query.
-
-     SQLCopy
-      ```
-      --Copy data from the public Azure storage account to the dbo.dimension_city table.
-      COPY INTO [dbo].[dimension_city]
-      FROM 
-      'https://fabrictutorialdata.blob.core.windows.net/sampledata/WideWorldImportersDW/tables/dimension_city.parquet'
-      WITH (FILE_TYPE = 'PARQUET');
-      
-      --Copy data from the public Azure storage account to the dbo.fact_sale table.
-      COPY INTO [dbo].[fact_sale]
-      FROM 'https://fabrictutorialdata.blob.core.windows.net/sampledata/WideWorldImportersDW/tables/fact_sale.parquet'
-      WITH (FILE_TYPE = 'PARQUET');
-      ```
+    ```    
+    --Copy data from the public Azure storage account to the dbo.dimension_city table.
+    COPY INTO [dbo].[dimension_city]
+    FROM 'https://fabrictutorialdata.blob.core.windows.net/sampledata/WideWorldImportersDW/tables/dimension_city.parquet'
+    WITH (FILE_TYPE = 'PARQUET');
+    
+    --Copy data from the public Azure storage account to the dbo.fact_sale table.
+    COPY INTO [dbo].[fact_sale]
+    FROM 'https://fabrictutorialdata.blob.core.windows.net/sampledata/WideWorldImportersDW/tables/fact_sale.parquet'
+    WITH (FILE_TYPE = 'PARQUET');
+    ```
       ![](./media/image51.png)
 
 3.  After the query is completed, review the messages, which indicats
@@ -525,18 +522,17 @@ syntax.
 
 3.  In the query editor, paste the following code to create clones of
     the **dbo.dimension\_city** and **dbo.fact\_sale** tables.
-  
-       SQLCopy
-       ```
-      --Create a clone of the dbo.dimension_city table.
-      CREATE TABLE [dbo].[dimension_city1] AS CLONE OF [dbo].[dimension_city];
-      
-      --Create a clone of the dbo.fact_sale table.
-      CREATE TABLE [dbo].[fact_sale1] AS CLONE OF [dbo].[fact_sale];
-      ```
-       ![](./media/image57.png)
+    
+    ```
+    --Create a clone of the dbo.dimension_city table.
+    CREATE TABLE [dbo].[dimension_city1] AS CLONE OF [dbo].[dimension_city];
+    
+    --Create a clone of the dbo.fact_sale table.
+    CREATE TABLE [dbo].[fact_sale1] AS CLONE OF [dbo].[fact_sale];
+    ```
+    ![](./media/image57.png)
 
-4.  Select **Run** to execute the query. The query takes a few seconds
+5.  Select **Run** to execute the query. The query takes a few seconds
     to execute. After the query is completed, the table clones
     **dimension_city1** and **fact_sale1** will be created.
 
@@ -544,22 +540,22 @@ syntax.
 
      ![](./media/image59.png)
 
-5.  Load the data preview to validate the data loaded successfully by
+6.  Load the data preview to validate the data loaded successfully by
     selecting on the **dimension_city1** table in the **Explorer**.
 
      ![](./media/image60.png)
 
-6.  Right-click on **SQL query** that you’ve created to clone the
+7.  Right-click on **SQL query** that you’ve created to clone the
     tables in the **Explorer** and select **Rename**.
 
      ![](./media/image61.png)
 
-7.  In the **Rename** dialog box, under the **Name** field, enter
+8.  In the **Rename** dialog box, under the **Name** field, enter
     **!!Clone Table!!**, then click on the **Rename** button.
 
      ![](./media/image62.png)
 
-8.  Click on the **Refresh** icon in the command bar below the **Home**
+9.  Click on the **Refresh** icon in the command bar below the **Home**
     tab.
 
      ![](./media/image63.png)
@@ -584,14 +580,13 @@ syntax.
 
 3.In the **query editor**, remove the existing code and paste the following to create clones of the **dbo.dimension_city ** and **dbo.fact_sale** tables in the dbo1 schema.  
 
-      
-       ```
-      --Create a clone of the dbo.dimension_city table in the dbo1 schema.
-      CREATE TABLE [dbo1].[dimension_city1] AS CLONE OF [dbo].[dimension_city];
-      
-      --Create a clone of the dbo.fact_sale table in the dbo1 schema.
-      CREATE TABLE [dbo1].[fact_sale1] AS CLONE OF [dbo].[fact_sale];
-      ```
+    ```
+    --Create a clone of the dbo.dimension_city table in the dbo1 schema.
+    CREATE TABLE [dbo1].[dimension_city1] AS CLONE OF [dbo].[dimension_city];
+    
+    --Create a clone of the dbo.fact_sale table in the dbo1 schema.
+    CREATE TABLE [dbo1].[fact_sale1] AS CLONE OF [dbo].[fact_sale];
+    ```
 
 4.  Select **Run** to execute the query. The query takes a few seconds
     to execute.
