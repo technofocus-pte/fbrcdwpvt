@@ -634,55 +634,54 @@ Learn how to create and save a new stored procedure to transform
     stored procedure **dbo.populate_aggregate_sale_by_city**. This
     stored procedure will create and load
     the **dbo.aggregate_sale_by_date_city** table in a later step.
-       SQLCopy
-       ```
-           --Drop the stored procedure if it already exists.
-      DROP PROCEDURE IF EXISTS [dbo].[populate_aggregate_sale_by_city]
-      GO
-      
-      --Create the populate_aggregate_sale_by_city stored procedure.
-      CREATE PROCEDURE [dbo].[populate_aggregate_sale_by_city]
-      AS
-      BEGIN
-          --If the aggregate table already exists, drop it. Then create the table.
-          DROP TABLE IF EXISTS [dbo].[aggregate_sale_by_date_city];
-          CREATE TABLE [dbo].[aggregate_sale_by_date_city]
-              (
-                  [Date] [DATETIME2](6),
-                  [City] [VARCHAR](8000),
-                  [StateProvince] [VARCHAR](8000),
-                  [SalesTerritory] [VARCHAR](8000),
-                  [SumOfTotalExcludingTax] [DECIMAL](38,2),
-                  [SumOfTaxAmount] [DECIMAL](38,6),
-                  [SumOfTotalIncludingTax] [DECIMAL](38,6),
-                  [SumOfProfit] [DECIMAL](38,2)
-              );
-      
-          --Reload the aggregated dataset to the table.
-          INSERT INTO [dbo].[aggregate_sale_by_date_city]
-          SELECT
-              FS.[InvoiceDateKey] AS [Date], 
-              DC.[City], 
-              DC.[StateProvince], 
-              DC.[SalesTerritory], 
-              SUM(FS.[TotalExcludingTax]) AS [SumOfTotalExcludingTax], 
-              SUM(FS.[TaxAmount]) AS [SumOfTaxAmount], 
-              SUM(FS.[TotalIncludingTax]) AS [SumOfTotalIncludingTax], 
-              SUM(FS.[Profit]) AS [SumOfProfit]
-          FROM [dbo].[fact_sale] AS FS
-          INNER JOIN [dbo].[dimension_city] AS DC
-              ON FS.[CityKey] = DC.[CityKey]
-          GROUP BY
-              FS.[InvoiceDateKey],
-              DC.[City], 
-              DC.[StateProvince], 
-              DC.[SalesTerritory]
-          ORDER BY 
-              FS.[InvoiceDateKey], 
-              DC.[StateProvince], 
-              DC.[City];
-      END
-      ```
+    ```
+    --Drop the stored procedure if it already exists.
+    DROP PROCEDURE IF EXISTS [dbo].[populate_aggregate_sale_by_city]
+    GO
+    
+    --Create the populate_aggregate_sale_by_city stored procedure.
+    CREATE PROCEDURE [dbo].[populate_aggregate_sale_by_city]
+    AS
+    BEGIN
+        --If the aggregate table already exists, drop it. Then create the table.
+        DROP TABLE IF EXISTS [dbo].[aggregate_sale_by_date_city];
+        CREATE TABLE [dbo].[aggregate_sale_by_date_city]
+            (
+                [Date] [DATETIME2](6),
+                [City] [VARCHAR](8000),
+                [StateProvince] [VARCHAR](8000),
+                [SalesTerritory] [VARCHAR](8000),
+                [SumOfTotalExcludingTax] [DECIMAL](38,2),
+                [SumOfTaxAmount] [DECIMAL](38,6),
+                [SumOfTotalIncludingTax] [DECIMAL](38,6),
+                [SumOfProfit] [DECIMAL](38,2)
+            );
+    
+        --Reload the aggregated dataset to the table.
+        INSERT INTO [dbo].[aggregate_sale_by_date_city]
+        SELECT
+            FS.[InvoiceDateKey] AS [Date], 
+            DC.[City], 
+            DC.[StateProvince], 
+            DC.[SalesTerritory], 
+            SUM(FS.[TotalExcludingTax]) AS [SumOfTotalExcludingTax], 
+            SUM(FS.[TaxAmount]) AS [SumOfTaxAmount], 
+            SUM(FS.[TotalIncludingTax]) AS [SumOfTotalIncludingTax], 
+            SUM(FS.[Profit]) AS [SumOfProfit]
+        FROM [dbo].[fact_sale] AS FS
+        INNER JOIN [dbo].[dimension_city] AS DC
+            ON FS.[CityKey] = DC.[CityKey]
+        GROUP BY
+            FS.[InvoiceDateKey],
+            DC.[City], 
+            DC.[StateProvince], 
+            DC.[SalesTerritory]
+        ORDER BY 
+            FS.[InvoiceDateKey], 
+            DC.[StateProvince], 
+            DC.[City];
+    END
+    ```      
   
      ![](./media/image72.png)
   
@@ -716,12 +715,10 @@ Learn how to create and save a new stored procedure to transform
 8.  In the query editor, paste the following code. This T-SQL executes
     **dbo.populate_aggregate_sale_by_city** to create the
     **dbo.aggregate_sale_by_date_city** table.Run the query
-
-      SQLCopy
-      ```
-      --Execute the stored procedure to create the aggregate table.
-      EXEC [dbo].[populate_aggregate_sale_by_city];
-      ```
+    ```
+    --Execute the stored procedure to create the aggregate table.
+    EXEC [dbo].[populate_aggregate_sale_by_city];
+    ```
      ![](./media/image78.png)
 
 9.  To save this query for reference later, right-click on the query tab
@@ -800,14 +797,24 @@ Learn how to create and save a new stored procedure to transform
     the **TotalIncludingTax** column value to **200000000** for the
     record which has the **SaleKey **value of **22632918.**
     Select **Run** to execute the query.
-    
-    SQLCopy
-      ```
-      /*Update the TotalIncludingTax value of the record with SaleKey value of 22632918*/
-      UPDATE [dbo].[fact_sale]
-      SET TotalIncludingTax = 200000000
-      WHERE SaleKey = 22632918;
-      ```
+        
+    ```
+    CREATE VIEW dbo.Top10CustomersView
+    AS
+    SELECT TOP (10)
+        FS.[CustomerKey],
+        DC.[Customer],
+        SUM(FS.TotalIncludingTax) AS TotalSalesAmount
+    FROM
+        [dbo].[dimension_customer] AS DC
+    INNER JOIN
+        [dbo].[fact_sale] AS FS ON DC.[CustomerKey] = FS.[CustomerKey]
+    GROUP BY
+        FS.[CustomerKey],
+        DC.[Customer]
+    ORDER BY
+        TotalSalesAmount DESC;
+    ```
     
      ![](./media/image87.png)
 
@@ -816,9 +823,9 @@ Learn how to create and save a new stored procedure to transform
     timestamp as a **datetime**. Select **Run** to execute the query.
     
       SQLCopy
-      ```
-      SELECT CURRENT_TIMESTAMP;
-      ```
+    ```
+    SELECT CURRENT_TIMESTAMP;
+    ```
       ![](./media/image88.png)
 
 9.  Copy the timestamp value returned to your clipboard.
@@ -1103,16 +1110,17 @@ the database.schema.table, as in SQL Server.
 2.  In the query editor, copy and paste the following T-SQL code. Select
     the **Run** button to execute the query. After the query is
     completed, you will see the results.
-      ```
-      SELECT Sales.StockItemKey, 
-      Sales.Description, 
-      SUM(CAST(Sales.Quantity AS int)) AS SoldQuantity, 
-      c.Customer
-      FROM [dbo].[fact_sale] AS Sales,
-      [ShortcutExercise].[dbo].[dimension_customer] AS c
-      WHERE Sales.CustomerKey = c.CustomerKey
-      GROUP BY Sales.StockItemKey, Sales.Description, c.Customer;
-      ```
+    ```
+    SELECT Sales.StockItemKey, 
+    Sales.Description, 
+    SUM(CAST(Sales.Quantity AS int)) AS SoldQuantity, 
+    c.Customer
+    FROM [dbo].[fact_sale] AS Sales,
+    [ShortcutExercise].[dbo].[dimension_customer] AS c
+    WHERE Sales.CustomerKey = c.CustomerKey
+    GROUP BY Sales.StockItemKey, Sales.Description, c.Customer;
+    
+    ```
       
       ![](./media/image130.png)
 
