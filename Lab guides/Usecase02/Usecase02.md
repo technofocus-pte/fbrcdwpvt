@@ -1,4 +1,4 @@
-### **Use Case 2 - Real-Time Analytics and Data Warehousing with AbboCost in Microsoft Fabric**
+### **Use Case 2 - Real-Time Intelligence and Data Warehousing with AbboCost in Microsoft Fabric**
 
 ## Introduction
 
