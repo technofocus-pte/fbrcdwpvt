@@ -152,8 +152,7 @@ trial enabled.
 5.  Wait for the deployment to complete. It takes 2-3 minutes to
     complete. When your new workspace opens, it should be empty.
 
-      ![](./media/image16.png)
-
+   
 ## Task 4: Create a Warehouse in Microsoft Fabric
 
 1.  In the **Data Warehouse** page, Select **+New item** and select **Warehouse** to
@@ -226,14 +225,13 @@ trial enabled.
 11. On the **Connection settings** pane that appears on the right side,
     configure the following settings and click on the **Create** button.
 
-      a)	In the Account name or URL, enter **!!https://fabrictutorialdata.blob.core.windows.net/sampledata/!!**
+    a)	In the Account name or URL, enter **!!https://fabrictutorialdata.blob.core.windows.net/sampledata/!!**
 
+    b)	In the Connection credentials section, click on the dropdown under Connection, then select Create new connection.
     
-      b)	In the Connection credentials section, click on the dropdown under Connection, then select Create new connection.
+    c)	In Connection name field, enter **!!Wide World Importers Public Sample!!**.
     
-      c)	In Connection name field, enter **!!Wide World Importers Public Sample!!**.
-    
-      d)  Set the Authentication kind to **Anonymous**.
+    d)  Set the Authentication kind to **Anonymous**.
          ![](./media/image31.png)
 
 13. Change the remaining settings on the **Source** page of the copy
