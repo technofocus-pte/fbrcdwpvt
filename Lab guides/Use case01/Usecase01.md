@@ -97,7 +97,6 @@ items.
 
 5.  You’ll be directed to Fabric Home page.
 
-    ![](./media/a1.png)
 
 ## **Task 2: Start the Microsoft Fabric trial**
 
